@@ -3,10 +3,11 @@ import pandas as pd
 import pickle
 import time
 import base64
+import joblib
 
 
 # Load the model
-model = pickle.load(open("insurance.pkl", "rb"))
+model = joblib.load(open("insurance.pkl", "rb"))
 data = pd.read_csv("insurance.csv")
 
 # Function to load and encode the image
