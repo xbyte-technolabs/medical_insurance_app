@@ -4,6 +4,9 @@ import pandas as pd
 import time
 import base64
 import joblib
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.preprocessing import LabelEncoder
+
 
 # Load the model
 model = joblib.load("insurance.joblib")
