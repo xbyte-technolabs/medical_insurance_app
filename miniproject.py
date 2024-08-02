@@ -6,7 +6,7 @@ import base64
 import joblib
 
 # Load the model
-model = joblib.load("insurance.pkl")
+model = joblib.load("insurance.joblib")
 data = pd.read_csv("insurance.csv")
 
 # Function to load and encode the image
