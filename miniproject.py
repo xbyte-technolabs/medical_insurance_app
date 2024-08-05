@@ -4,39 +4,38 @@ import pandas as pd
 import time
 import base64
 import joblib
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.preprocessing import LabelEncoder
 
 
 # Load the model
 model = joblib.load("insurance.joblib")
 data = pd.read_csv("insurance.csv")
 
-# Function to load and encode the image
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+# # Function to load and encode the image
+# def get_base64_of_bin_file(bin_file):
+#     with open(bin_file, 'rb') as f:
+#         data = f.read()
+#     return base64.b64encode(data).decode()
 
-# background image
-background_image_path = '6843497.png'
-bg_img_base64 = get_base64_of_bin_file(background_image_path)
+# # background image
+# background_image_path = 'you.png'
+# bg_img_base64 = get_base64_of_bin_file(background_image_path)
 
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] {{
-    background-image: url("data:image/png;base64,{bg_img_base64}");
-    background-size: cover;
-    background-position: center;
-}}
-[data-testid="stHeader"] {{
-    background: rgba(0, 0, 0, 0);
-}}
-</style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# page_bg_img = f"""
+# <style>
+# [data-testid="stAppViewContainer"] {{
+#     background-image: url("data:image/png;base64,{bg_img_base64}");
+#     background-size: cover;
+#     background-position: center;
+# }}
+# [data-testid="stHeader"] {{
+#     background: rgba(0, 0, 0, 0);
+# }}
+# </style>
+# """
+# st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #sidebar radio button
+st.sidebar.image("you.png", use_column_width=True)
 menu=st.sidebar.radio("Menu",['Home','Insurance Cost'])
 
 
@@ -124,5 +123,6 @@ if menu=='Insurance Cost':
 
 
         prediction = model.predict(input_data)
-        output = f'Predicted Insurance Cost : {prediction[0]:.2f}'
+        output = f'Predicted Insurance Cost : {prediction[0]:.2f}  💸'
         st.markdown(f"<h6 style='font-size:20px;'>{output.strip()}</h1>", unsafe_allow_html=True)
+ 
