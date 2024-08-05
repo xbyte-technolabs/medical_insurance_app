@@ -34,8 +34,11 @@ data = pd.read_csv("insurance.csv")
 # """
 # st.markdown(page_bg_img, unsafe_allow_html=True)
 
+#sidebar image
+logo_path = "you.png"
+st.sidebar.image(logo_path, use_column_width=True) 
+
 #sidebar radio button
-# st.sidebar.image("you.png", use_column_width=True)
 menu=st.sidebar.radio("Menu",['Home','Insurance Cost'])
 
 
