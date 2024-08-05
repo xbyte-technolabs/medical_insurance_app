@@ -19,7 +19,7 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 # background image
-background_image_path = 'You.png'
+background_image_path = '6843497.png'
 bg_img_base64 = get_base64_of_bin_file(background_image_path)
 
 page_bg_img = f"""
@@ -126,4 +126,3 @@ if menu=='Insurance Cost':
         prediction = model.predict(input_data)
         output = f'Predicted Insurance Cost : {prediction[0]:.2f}'
         st.markdown(f"<h6 style='font-size:20px;'>{output.strip()}</h1>", unsafe_allow_html=True)
-        
