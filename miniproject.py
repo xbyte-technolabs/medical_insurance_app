@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-# import pickle
 import time
 import base64
 import joblib
@@ -10,13 +9,11 @@ import joblib
 model = joblib.load("insurance.joblib")
 data = pd.read_csv("insurance.csv")
 
-
-# #sidebar image
-# logo_path = "you.png"
-# st.sidebar.image(logo_path, use_column_width=True) 
-
 #sidebar radio button
 menu=st.sidebar.radio("Menu",['Home','Insurance Cost'])
+
+# Sidebar image
+st.sidebar.image("you.png", use_column_width=True)
 
 
 if menu=='Home':
@@ -103,5 +100,5 @@ if menu=='Insurance Cost':
 
 
         prediction = model.predict(input_data)
-        output = f'Predicted Insurance Cost : {prediction[0]:.2f}  💸'
+        output = f'Predicted Insurance Cost : {prediction[0]:.2f}'
         st.markdown(f"<h6 style='font-size:20px;'>{output.strip()}</h1>", unsafe_allow_html=True)
