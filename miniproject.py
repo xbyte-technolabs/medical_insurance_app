@@ -125,4 +125,3 @@ if menu=='Insurance Cost':
         prediction = model.predict(input_data)
         output = f'Predicted Insurance Cost : {prediction[0]:.2f}  💸'
         st.markdown(f"<h6 style='font-size:20px;'>{output.strip()}</h1>", unsafe_allow_html=True)
- 
