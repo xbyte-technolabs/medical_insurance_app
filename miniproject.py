@@ -13,7 +13,7 @@ data = pd.read_csv("insurance.csv")
 menu=st.sidebar.radio("Menu",['Home','Insurance Cost'])
 
 # Sidebar image
-st.sidebar.image("you.png", use_column_width=True)
+st.sidebar.image("C:\Users\xbyte\Desktop\ML Project\Insurance Project\you.png", use_column_width=True)
 
 
 if menu=='Home':
