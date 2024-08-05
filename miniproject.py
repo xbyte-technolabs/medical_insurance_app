@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import time
-import base64
 import joblib
-
 
 # Load the model
 model = joblib.load("insurance.joblib")
@@ -11,9 +9,6 @@ data = pd.read_csv("insurance.csv")
 
 #sidebar radio button
 menu=st.sidebar.radio("Menu",['Home','Insurance Cost'])
-
-# Sidebar image
-st.sidebar.image("C:\Users\xbyte\Desktop\ML Project\Insurance Project\you.png", use_column_width=True)
 
 
 if menu=='Home':
