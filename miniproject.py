@@ -34,9 +34,9 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-#sidebar image
-logo_path = "you.png"
-st.sidebar.image(logo_path, use_column_width=True) 
+# #sidebar image
+# logo_path = "you.png"
+# st.sidebar.image(logo_path, use_column_width=True) 
 
 #sidebar radio button
 menu=st.sidebar.radio("Menu",['Home','Insurance Cost'])
