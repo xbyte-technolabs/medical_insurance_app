@@ -10,11 +10,11 @@ import joblib
 model = joblib.load("insurance.joblib")
 data = pd.read_csv("insurance.csv")
 
-# # Function to load and encode the image
-# def get_base64_of_bin_file(bin_file):
-#     with open(bin_file, 'rb') as f:
-#         data = f.read()
-#     return base64.b64encode(data).decode()
+# Function to load and encode the image
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
 # # background image
 # background_image_path = 'you.png'
