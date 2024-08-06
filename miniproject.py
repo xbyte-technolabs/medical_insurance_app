@@ -43,6 +43,7 @@ if menu=='Home':
     #     sns.barplot(data,x='sex',y='charges')
     #     st.pyplot(fig)
 
+
 if menu=='Insurance Cost':
 
     # Load the model
@@ -60,10 +61,13 @@ if menu=='Insurance Cost':
 
 
 
-    age = st.number_input('Age', min_value=18, max_value=65, value=25) 
+    age = st.number_input('Age', min_value=18, max_value=65, value=25)
     sex = st.selectbox('Sex', ['male', 'female'])
-    bmi = st.number_input('BMI', min_value=14.0, max_value=54.0, value=25.0)
-    children = st.number_input('Number of children', min_value=0, max_value=5, value=0)
+
+    bmi = st.number_input('BMI', min_value=14.0, max_value=54.0, value=25.0,)
+    # st.markdown('[Calculate your BMI](https://www.calculator.net/bmi-calculator.html)', unsafe_allow_html=True)
+
+    children = st.number_input('Children', min_value=0, max_value=5, value=0)
     smoker = st.selectbox('Smoker', ['yes', 'no'])
     region = st.selectbox('Region', ['southwest', 'southeast', 'northwest', 'northeast'])
 
